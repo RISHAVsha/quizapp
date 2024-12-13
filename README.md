@@ -31,24 +31,26 @@ To set up and run this app locally, make sure you have the following installed:
    ```bash
    git clone https://github.com/rishavsah/quizapp.git
    cd quizapp
+   ```
 
 2. **Optional**:
      Create a virtual environment 
 
 ```bash
-    python3 -m venv venv
-    source venv/bin/activate 
-     # On Windows, use `venv\Scripts\activate`
+python3 -m venv venv
+source venv/bin/activate 
+# On Windows, use `venv\Scripts\activate`
+```
 
 3. **Install required dependencies**:
-  ```bash
-  pip install -r requirements.txt
-
+```bash
+     pip install -r requirements.txt
+```
 
 4. **run the flask app**:
 
 ```bash
     flask run
-
+```
 
 
