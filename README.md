@@ -40,12 +40,12 @@ To set up and run this app locally, make sure you have the following installed:
     source venv/bin/activate 
      # On Windows, use `venv\Scripts\activate`
 
-3.**Install required dependencies**:
+3. **Install required dependencies**:
   ```bash
   pip install -r requirements.txt
 
 
-4.**run the flask app**:
+4. **run the flask app**:
 
 ```bash
     flask run
