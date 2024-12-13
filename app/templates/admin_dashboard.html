@@ -1,0 +1,25 @@
+<h1>Admin Dashboard</h1>
+<a href="{{ url_for('add_question') }}">Add Question</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Question</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for question in questions %}
+        <tr>
+            <td>{{ question.id }}</td>
+            <td>{{ question.question }}</td>
+            <td>{{ question.category }}</td>
+            <td>
+                <a href="{{ url_for('edit_question', question_id=question.id) }}">Edit</a>
+                <a href="{{ url_for('delete_question', question_id=question.id) }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,143 @@
+{% from "links.html" import show_link %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizzicle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .hero-section {
+        background-color: rgb(1, 1, 53);
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+      }
+
+      .hero-section h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .features-section {
+        padding: 50px 0;
+      }
+
+      .feature-box {
+        text-align: center;
+        padding: 50px;
+        border-radius: 10px;
+        transition: transform 0.3s;
+        color:rgb(1, 1, 53);
+      }
+
+      .feature-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .footer {
+        background-color: rgb(1, 1, 53);
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+          <img src="https://cdn-icons-png.flaticon.com/512/4553/4553013.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Quizzicle
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-fill">
+      <div class="hero-section">
+        <div class="container">
+          <h1>Welcome to Quizzicle</h1>
+        </div>
+      </div>
+
+      <div class="features-section" id="features">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="feature-box bg-white p-4 shadow-sm">
+                <a href="{{ url_for('quiz_category',category = 'History')}}">
+                  <h3 class="mt-3">History</h3>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-box bg-white p-4 shadow-sm">
+                <a href="{{ url_for('quiz_category',category = 'Science') }}">
+                  <h3 class="mt-3">Science</h3>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-box bg-white p-4 shadow-sm">
+                <a href="{{ url_for('quiz_category',category = 'Geography') }}">
+                  <h3 class="mt-3">Geography</h3>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box bg-white p-4 shadow-sm">
+                  <a href="{{ url_for('quiz_category',category = 'Programming') }}">
+                    <h3 class="mt-3">Programming</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="feature-box bg-white p-4 shadow-sm">
+                  <a href="{{ url_for('quiz_category',category = 'Sports') }}">
+                    <h3 class="mt-3">Sports</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="feature-box bg-white p-4 shadow-sm">
+                  <a href="{{ url_for('quiz_category',category = 'Arts') }}">
+                    <h3 class="mt-3">Arts</h3>
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 QuizApp. All rights reserved to <a href="#">Rishav Shah</a>.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
